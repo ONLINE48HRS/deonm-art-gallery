@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deon Art Gallery | Original Fine Art That Speaks Beyond Words</title>
-    <meta name="description" content="Deon Art Gallery - Fine Art Creator offering custom portraits, original artwork, framing, and creative consultation.">
+    <title>DeonM Art Gallery (PTY) Ltd | Creative Hub & Fine Art Gallery</title>
+    <meta name="description" content="DeonM Art Gallery - Multi-functional creative hub in eMakhazeni offering fine art, commercial branding, custom apparel, and art education.">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
@@ -16,12 +16,12 @@
         }
         
         :root {
-            --black: #0a0a0a;
+            --black: #111111;
             --charcoal: #1a1a1a;
             --gray: #2a2a2a;
             --light-gray: #f5f5f5;
             --white: #ffffff;
-            --accent-blue: #1e3a8a;
+            --accent-blue: #1d4ed8;
             --accent-red: #dc2626;
             --accent-yellow: #fbbf24;
         }
@@ -60,21 +60,22 @@
         nav {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 1.5rem 2rem;
+            padding: 1.2rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .logo {
-            height: 60px;
+            height: 72px;
             width: auto;
             object-fit: contain;
+            display: block;
         }
         
         .nav-links {
             display: flex;
-            gap: 3rem;
+            gap: 2.5rem;
             align-items: center;
             list-style: none;
         }
@@ -84,7 +85,7 @@
             color: var(--charcoal);
             font-size: 0.85rem;
             font-weight: 500;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.05em;
             text-transform: uppercase;
             transition: color 0.3s ease;
             position: relative;
@@ -96,7 +97,7 @@
             bottom: -5px;
             left: 0;
             width: 0;
-            height: 1px;
+            height: 2px;
             background: var(--accent-blue);
             transition: width 0.3s ease;
         }
@@ -108,12 +109,12 @@
         .cta-button {
             background: var(--black);
             color: var(--white);
-            padding: 0.9rem 2rem;
-            border: none;
+            padding: 0.9rem 2.2rem;
+            border: 1px solid var(--black);
             font-family: 'Montserrat', sans-serif;
             font-size: 0.8rem;
             font-weight: 600;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -123,8 +124,9 @@
         
         .cta-button:hover {
             background: var(--accent-blue);
+            border-color: var(--accent-blue);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(30, 58, 138, 0.2);
+            box-shadow: 0 10px 30px rgba(29, 78, 216, 0.25);
         }
         
         .mobile-menu {
@@ -143,7 +145,7 @@
         
         /* Hero Section */
         .hero {
-            margin-top: 90px;
+            margin-top: 96px;
             min-height: 90vh;
             display: flex;
             align-items: center;
@@ -160,7 +162,7 @@
             right: -10%;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(30, 58, 138, 0.03) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(29, 78, 216, 0.03) 0%, transparent 70%);
             pointer-events: none;
         }
         
@@ -207,7 +209,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 0.8rem;
             font-weight: 600;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -292,10 +294,86 @@
             letter-spacing: 0.1em;
         }
         
+        /* Services Overview */
+        .services-overview {
+            padding: 6rem 2rem;
+            background: var(--light-gray);
+        }
+        
+        .services-overview-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .services-overview-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .services-overview-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--black);
+            margin-bottom: 1rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card-main {
+            background: var(--white);
+            padding: 2.5rem;
+            border-left: 4px solid var(--accent-blue);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .service-card-main:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-left-color: var(--accent-red);
+        }
+        
+        .service-card-main h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+        
+        .service-card-main p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        
+        .service-card-main ul {
+            list-style: none;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .service-card-main ul li {
+            padding: 0.4rem 0;
+            color: var(--gray);
+            font-size: 0.9rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .service-card-main ul li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+        }
+        
         /* Gallery Section */
         .gallery {
             padding: 8rem 2rem;
-            background: var(--light-gray);
+            background: var(--white);
         }
         
         .gallery-header {
@@ -431,7 +509,7 @@
         /* Services Section */
         .services {
             padding: 8rem 2rem;
-            background: var(--white);
+            background: var(--light-gray);
         }
         
         .services-container {
@@ -475,27 +553,26 @@
             gap: 2rem;
         }
         
-        .service-card {
+        .service-item {
             padding: 2rem;
             border-left: 3px solid var(--accent-blue);
             transition: all 0.3s ease;
-            background: var(--light-gray);
+            background: var(--white);
         }
         
-        .service-card:hover {
+        .service-item:hover {
             border-left-color: var(--accent-red);
             transform: translateX(10px);
-            background: var(--white);
             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
         }
         
-        .service-card h3 {
+        .service-item h3 {
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
             color: var(--black);
         }
         
-        .service-card p {
+        .service-item p {
             color: var(--gray);
             font-size: 0.95rem;
         }
@@ -566,7 +643,7 @@
         /* Contact Section */
         .contact {
             padding: 8rem 2rem;
-            background: var(--light-gray);
+            background: var(--white);
         }
         
         .contact-container {
@@ -611,6 +688,32 @@
             color: var(--accent-blue);
         }
         
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border: 1px solid var(--black);
+            border-radius: 50%;
+            color: var(--black);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+        
+        .social-links a:hover {
+            background: var(--black);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+        
         .contact-image {
             height: 500px;
             overflow: hidden;
@@ -624,7 +727,7 @@
         }
         
         .contact-form {
-            background: var(--white);
+            background: var(--light-gray);
             padding: 3rem;
             box-shadow: 0 10px 40px rgba(0,0,0,0.05);
         }
@@ -643,6 +746,7 @@
         }
         
         .form-group input,
+        .form-group select,
         .form-group textarea {
             width: 100%;
             padding: 1rem;
@@ -650,14 +754,14 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 0.95rem;
             transition: border-color 0.3s ease;
-            background: var(--light-gray);
+            background: var(--white);
         }
         
         .form-group input:focus,
+        .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: var(--accent-blue);
-            background: var(--white);
         }
         
         .form-group textarea {
@@ -682,7 +786,7 @@
         }
         
         .footer-brand img {
-            height: 50px;
+            height: 60px;
             margin-bottom: 1.5rem;
             filter: brightness(0) invert(1);
         }
@@ -691,6 +795,14 @@
             color: rgba(255,255,255,0.7);
             font-size: 0.9rem;
             line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-brand .tagline {
+            font-style: italic;
+            color: var(--accent-yellow);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
         }
         
         .footer-links h4 {
@@ -730,6 +842,10 @@
         
         /* Responsive */
         @media (max-width: 968px) {
+            .logo {
+                height: 52px;
+            }
+            
             .nav-links {
                 display: none;
             }
@@ -781,7 +897,6 @@
             
             .footer-container {
                 grid-template-columns: 1fr;
-                gap: 2rem;
             }
         }
     </style>
@@ -791,7 +906,7 @@
     <!-- Header -->
     <header>
         <nav>
-            <img src="logo main.jpg" alt="Deon Art Gallery" class="logo">
+            <img src="logo-transparent.png" alt="DeonM Art Gallery" class="logo">
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -812,8 +927,8 @@
     <section class="hero" id="home">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Original Fine Art That <span>Speaks Beyond Words</span></h1>
-                <p>Discover custom portraits, original artwork, framing, and creative consultation from Deon Art Gallery.</p>
+                <h1>Where Creativity <span>Meets Community</span></h1>
+                <p>DeonM Art Gallery is a multi-functional creative hub in eMakhazeni, offering fine art, commercial branding, custom apparel, and art education. Where artistic excellence meets professional service.</p>
                 <div class="hero-buttons">
                     <a href="#gallery" class="cta-button">View Gallery</a>
                     <a href="#contact" class="btn-secondary">Enquire Now</a>
@@ -829,16 +944,68 @@
     <section class="about" id="about">
         <div class="about-container">
             <span class="section-label">About Us</span>
-            <h2>Where Art Meets Soul</h2>
+            <h2>A Creative Hub Rooted in Community</h2>
             <p>
-                Deon Art Gallery is a fine art creator and creative brand dedicated to producing original works that resonate with emotion and authenticity. Founded by Deon Mahlangu, we specialize in custom portraits, original artwork, professional framing, and artistic consultation.
+                DeonM Art Gallery (PTY) Ltd is more than just an art gallery—we are a multi-functional creative hub serving eMakhazeni (Belfast), Mpumalanga. Founded on the belief that art should be accessible, professional, and transformative, we bridge the gap between fine art excellence and commercial creative services.
             </p>
             <p>
-                Our approach combines traditional fine art techniques with contemporary African creative identity, resulting in pieces that are both timeless and uniquely personal. Every artwork is crafted with meticulous attention to detail, ensuring that your vision is brought to life with the highest level of artistry and professionalism.
+                From hyperrealistic pencil drawings and oil paintings to commercial branding, custom apparel printing, and youth art education, we offer comprehensive creative solutions. Our mission is to nurture artistic talent while providing professional services that meet the diverse needs of our community and beyond.
             </p>
             <div class="founder-info">
                 <h3>Deon Mahlangu</h3>
-                <p>CEO, Founder & Managing Director | Fine Artist</p>
+                <p>Founder & Creative Director | Fine Artist & Entrepreneur</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="services-overview-container">
+            <div class="services-overview-header">
+                <span class="section-label">What We Do</span>
+                <h2>Four Pillars of Creativity</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card-main">
+                    <h3>Fine Art Gallery</h3>
+                    <p>Showcasing exceptional hyperrealistic pencil drawings, sketches, and oil/acrylic paintings that capture emotion and detail with stunning precision.</p>
+                    <ul>
+                        <li>Hyperrealistic Portraits</li>
+                        <li>Pencil & Charcoal Drawings</li>
+                        <li>Oil & Acrylic Paintings</li>
+                        <li>Custom Commissions</li>
+                    </ul>
+                </div>
+                <div class="service-card-main">
+                    <h3>Commercial Branding</h3>
+                    <p>Professional branding solutions that help businesses stand out with memorable visual identities and high-quality printed materials.</p>
+                    <ul>
+                        <li>Logo Design</li>
+                        <li>Signboards & Banners</li>
+                        <li>Digital Printing</li>
+                        <li>Marketing Materials</li>
+                    </ul>
+                </div>
+                <div class="service-card-main">
+                    <h3>Custom Apparel</h3>
+                    <p>In-house printing and embroidery services for personalized clothing, uniforms, and promotional wear that makes a statement.</p>
+                    <ul>
+                        <li>Screen Printing</li>
+                        <li>Embroidery Services</li>
+                        <li>Custom Uniforms</li>
+                        <li>Promotional Wear</li>
+                    </ul>
+                </div>
+                <div class="service-card-main">
+                    <h3>Art Education</h3>
+                    <p>Young Artist Classes designed to nurture creativity and develop artistic skills in the youth of the eMakhazeni community.</p>
+                    <ul>
+                        <li>Youth Art Classes</li>
+                        <li>Skills Development</li>
+                        <li>Creative Workshops</li>
+                        <li>Community Programs</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -854,49 +1021,49 @@
                 <img src="art1.jpg" alt="Artwork 1">
                 <div class="gallery-overlay">
                     <h3>Artwork 1</h3>
-                    <p>Original Fine Art</p>
+                    <p>Fine Art Collection</p>
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox('art2.jpg')">
                 <img src="art2.jpg" alt="Artwork 2">
                 <div class="gallery-overlay">
                     <h3>Artwork 2</h3>
-                    <p>Original Fine Art</p>
+                    <p>Fine Art Collection</p>
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox('art3.jpg')">
                 <img src="art3.jpg" alt="Artwork 3">
                 <div class="gallery-overlay">
                     <h3>Artwork 3</h3>
-                    <p>Original Fine Art</p>
+                    <p>Fine Art Collection</p>
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox('art4.jpg')">
                 <img src="art4.jpg" alt="Artwork 4">
                 <div class="gallery-overlay">
                     <h3>Artwork 4</h3>
-                    <p>Original Fine Art</p>
+                    <p>Fine Art Collection</p>
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox('art5.jpg')">
                 <img src="art5.jpg" alt="Artwork 5">
                 <div class="gallery-overlay">
                     <h3>Artwork 5</h3>
-                    <p>Original Fine Art</p>
+                    <p>Fine Art Collection</p>
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox('art6.jpg')">
                 <img src="art6.jpg" alt="Artwork 6">
                 <div class="gallery-overlay">
                     <h3>Artwork 6</h3>
-                    <p>Original Fine Art</p>
+                    <p>Fine Art Collection</p>
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox('art7.jpg')">
                 <img src="art7.jpg" alt="Artwork 7">
                 <div class="gallery-overlay">
                     <h3>Artwork 7</h3>
-                    <p>Original Fine Art</p>
+                    <p>Fine Art Collection</p>
                 </div>
             </div>
             <div class="gallery-item placeholder">
@@ -906,14 +1073,14 @@
                 <img src="art9.jpg" alt="Artwork 9">
                 <div class="gallery-overlay">
                     <h3>Artwork 9</h3>
-                    <p>Original Fine Art</p>
+                    <p>Fine Art Collection</p>
                 </div>
             </div>
             <div class="gallery-item" onclick="openLightbox('art10.jpg')">
                 <img src="art10.jpg" alt="Artwork 10">
                 <div class="gallery-overlay">
                     <h3>Artwork 10</h3>
-                    <p>Original Fine Art</p>
+                    <p>Fine Art Collection</p>
                 </div>
             </div>
         </div>
@@ -929,37 +1096,33 @@
     <section class="services" id="services">
         <div class="services-container">
             <div class="services-header">
-                <span class="section-label">What We Offer</span>
-                <h2>Our Services</h2>
+                <span class="section-label">Our Services</span>
+                <h2>Creative Solutions for Every Need</h2>
             </div>
             <div class="services-grid">
                 <div class="services-image">
                     <img src="services.jpg" alt="Our Services">
                 </div>
                 <div class="services-list">
-                    <div class="service-card">
-                        <h3>Art Design & Consultation</h3>
-                        <p>Personalized artistic guidance to bring your creative vision to life with expert consultation on composition, style, and technique.</p>
+                    <div class="service-item">
+                        <h3>Fine Art Creation</h3>
+                        <p>Original hyperrealistic drawings, sketches, and paintings created with meticulous attention to detail and artistic excellence.</p>
                     </div>
-                    <div class="service-card">
+                    <div class="service-item">
+                        <h3>Commercial Branding & Design</h3>
+                        <p>Professional logo design, signboards, and digital printing services to elevate your brand presence.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Custom Apparel Printing</h3>
+                        <p>In-house screen printing and embroidery services for custom clothing, uniforms, and promotional items.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Art Education Programs</h3>
+                        <p>Young Artist Classes and workshops designed to develop creativity and artistic skills in our community's youth.</p>
+                    </div>
+                    <div class="service-item">
                         <h3>Custom Framing & Consultation</h3>
-                        <p>Professional framing services that enhance and protect your artwork, with expert advice on matting, glass, and frame selection.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Original Artwork & Portraits</h3>
-                        <p>Bespoke original pieces and custom portraits created with meticulous attention to detail and artistic excellence.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Graphic Design</h3>
-                        <p>Creative graphic design services that blend artistic vision with professional execution for unique visual communication.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Printing Services</h3>
-                        <p>High-quality printing solutions for your artwork, ensuring museum-grade reproduction and archival standards.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Art Shows & Events</h3>
-                        <p>Curated art exhibitions and creative events that showcase exceptional talent and foster artistic community.</p>
+                        <p>Professional framing services and expert artistic consultation to bring your creative vision to life.</p>
                     </div>
                 </div>
             </div>
@@ -971,39 +1134,39 @@
         <div class="why-container">
             <div class="why-header">
                 <span class="section-label" style="color: var(--accent-yellow);">Why Choose Us</span>
-                <h2>The Deon Art Gallery Difference</h2>
-                <p>Committed to excellence in every brushstroke</p>
+                <h2>The DeonM Art Gallery Difference</h2>
+                <p>Professional excellence meets community impact</p>
             </div>
             <div class="why-grid">
                 <div class="why-item">
                     <div class="why-icon">✦</div>
-                    <h3>Original Creative Work</h3>
-                    <p>Every piece is uniquely crafted with originality and artistic integrity at its core.</p>
+                    <h3>Multifunctional Creative Hub</h3>
+                    <p>From fine art to commercial services, we offer comprehensive creative solutions under one roof.</p>
                 </div>
                 <div class="why-item">
                     <div class="why-icon">✦</div>
-                    <h3>Fine Art Perspective</h3>
-                    <p>Professional fine art training combined with contemporary creative vision.</p>
+                    <h3>Community-Focused</h3>
+                    <p>Rooted in eMakhazeni, committed to developing local talent and serving our community.</p>
                 </div>
                 <div class="why-item">
                     <div class="why-icon">✦</div>
-                    <h3>Custom Commissions</h3>
-                    <p>Tailored artwork created specifically for your space, vision, and requirements.</p>
+                    <h3>Professional Quality</h3>
+                    <p>Museum-grade artwork and commercial-grade printing with attention to every detail.</p>
                 </div>
                 <div class="why-item">
                     <div class="why-icon">✦</div>
-                    <h3>Personal Consultation</h3>
-                    <p>One-on-one artistic guidance throughout your creative journey with us.</p>
+                    <h3>Youth Development</h3>
+                    <p>Dedicated art education programs nurturing the next generation of creative talent.</p>
                 </div>
                 <div class="why-item">
                     <div class="why-icon">✦</div>
-                    <h3>Professional Presentation</h3>
-                    <p>Museum-quality finishing and presentation standards for all our work.</p>
+                    <h3>In-House Services</h3>
+                    <p>Complete control over quality with our own printing and embroidery facilities.</p>
                 </div>
                 <div class="why-item">
                     <div class="why-icon">✦</div>
-                    <h3>African Creative Identity</h3>
-                    <p>Celebrating and expressing unique African artistic perspectives and heritage.</p>
+                    <h3>Custom Solutions</h3>
+                    <p>Tailored services for art commissions, branding projects, and educational programs.</p>
                 </div>
             </div>
         </div>
@@ -1018,8 +1181,8 @@
                 <div class="contact-details">
                     <div class="contact-item">
                         <div>
-                            <strong>Address</strong>
-                            <span>2021 Siyathuthuka, Belfast, South Africa, 1102</span>
+                            <strong>Location</strong>
+                            <span>eMakhazeni (Belfast), Mpumalanga, South Africa</span>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1036,41 +1199,62 @@
                     </div>
                     <div class="contact-item">
                         <div>
-                            <strong>Instagram</strong>
-                            <a href="https://instagram.com/deonm_art" target="_blank">@deonm_art</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div>
                             <strong>Website</strong>
                             <a href="https://deonmartgallery.co.za" target="_blank">deonmartgallery.co.za</a>
                         </div>
                     </div>
                 </div>
-                <div class="contact-image">
+                
+                <div class="social-links">
+                    <a href="https://instagram.com/deonm_art" target="_blank" title="Instagram">📷</a>
+                    <a href="#" target="_blank" title="TikTok">🎵</a>
+                </div>
+                
+                <div class="contact-image" style="margin-top: 3rem;">
                     <img src="contacts.jpg" alt="Contact Us">
                 </div>
             </div>
+            
             <div class="contact-form">
-                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 2rem; color: var(--black);">Request a Consultation</h3>
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--black);">Request a Consultation</h3>
+                <p style="color: var(--gray); margin-bottom: 2rem; font-size: 0.95rem;">Tell us about your project - art commission, branding, apparel, or classes</p>
+                
                 <form onsubmit="event.preventDefault(); alert('Thank you for your enquiry. We will contact you soon.');">
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name">Full Name *</label>
                         <input type="text" id="name" name="name" required>
                     </div>
+                    
                     <div class="form-group">
-                        <label for="phone">Phone</label>
+                        <label for="phone">Phone Number *</label>
                         <input type="tel" id="phone" name="phone" required>
                     </div>
+                    
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">Email Address *</label>
                         <input type="email" id="email" name="email" required>
                     </div>
+                    
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Tell us about your project..." required></textarea>
+                        <label for="service">Service Interested In *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service...</option>
+                            <option value="art-commission">Custom Art Commission</option>
+                            <option value="branding">Commercial Branding/Logo Design</option>
+                            <option value="apparel">Custom Apparel Printing</option>
+                            <option value="embroidery">Embroidery Services</option>
+                            <option value="classes">Young Artist Classes</option>
+                            <option value="framing">Custom Framing</option>
+                            <option value="other">Other Enquiry</option>
+                        </select>
                     </div>
-                    <button type="submit" class="cta-button" style="width: 100%;">Request a Consultation</button>
+                    
+                    <div class="form-group">
+                        <label for="message">Tell Us About Your Project *</label>
+                        <textarea id="message" name="message" placeholder="Please describe your project, timeline, and any specific requirements..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="cta-button" style="width: 100%;">Send Enquiry</button>
                 </form>
             </div>
         </div>
@@ -1080,38 +1264,45 @@
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="logo main.jpg" alt="Deon Art Gallery">
-                <p>Original fine art that speaks beyond words. Creating meaningful artwork with passion, precision, and artistic excellence.</p>
+                <img src="logo-transparent.png" alt="DeonM Art Gallery">
+                <p>Multi-functional creative hub in eMakhazeni, Mpumalanga. Bridging fine art excellence with professional commercial services and community development.</p>
+                <p class="tagline">"I really believe in my Art work"</p>
             </div>
+            
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#about">About Us</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
+            
             <div class="footer-links">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="#services">Art Design</a></li>
-                    <li><a href="#services">Custom Framing</a></li>
-                    <li><a href="#services">Portraits</a></li>
-                    <li><a href="#services">Consultation</a></li>
+                    <li><a href="#services">Fine Art Gallery</a></li>
+                    <li><a href="#services">Commercial Branding</a></li>
+                    <li><a href="#services">Custom Apparel</a></li>
+                    <li><a href="#services">Art Education</a></li>
                 </ul>
             </div>
+            
             <div class="footer-links">
                 <h4>Contact</h4>
                 <ul>
                     <li><a href="tel:0716436128">071 643 6128</a></li>
                     <li><a href="mailto:mahlangudeon21@gmail.com">Email Us</a></li>
                     <li><a href="https://instagram.com/deonm_art" target="_blank">Instagram</a></li>
+                    <li><a href="#">TikTok</a></li>
                 </ul>
             </div>
         </div>
+        
         <div class="footer-bottom">
-            <p>&copy; 2026 Deon Art Gallery (Pty) Ltd. All rights reserved. | "I really believe in my Art work"</p>
+            <p>&copy; 2026 DeonM Art Gallery (PTY) Ltd. All rights reserved. | eMakhazeni, Mpumalanga</p>
         </div>
     </footer>
 
