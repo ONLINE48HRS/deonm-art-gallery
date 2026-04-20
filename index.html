@@ -69,7 +69,7 @@
         }
         
         .logo {
-            height: 72px;
+            height: 100px;
             width: auto;
             object-fit: contain;
             display: block;
@@ -132,26 +132,14 @@
         }
         
         .whatsapp-btn {
-            background: var(--whatsapp);
-            color: #ffffff !important;
-            padding: 0.9rem 2.2rem;
-            border: 1px solid var(--whatsapp);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
+            background: #25D366;
+            border-color: #25D366;
+            color: white !important;
         }
         
         .whatsapp-btn:hover {
-            background: var(--whatsapp-dark);
-            border-color: var(--whatsapp-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.25);
+            background: #1ebe5d;
+            border-color: #1ebe5d;
         }
         
         .mobile-menu {
@@ -170,7 +158,7 @@
         
         /* Hero Section */
         .hero {
-            margin-top: 96px;
+            margin-top: 124px;
             min-height: 90vh;
             display: flex;
             align-items: center;
@@ -724,32 +712,6 @@
             color: var(--accent-blue);
         }
         
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            border: 1px solid var(--black);
-            border-radius: 50%;
-            color: var(--black);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1.2rem;
-        }
-        
-        .social-links a:hover {
-            background: var(--black);
-            color: var(--white);
-            transform: translateY(-3px);
-        }
-        
         .whatsapp-contact {
             display: inline-flex;
             align-items: center;
@@ -775,12 +737,14 @@
             height: 500px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-top: 3rem;
         }
         
         .contact-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
         }
         
         .contact-form {
@@ -864,9 +828,10 @@
         }
         
         .footer-brand img {
-            height: 60px;
+            height: 70px;
             margin-bottom: 1.5rem;
-            filter: brightness(0) invert(1);
+            object-fit: contain;
+            display: block;
         }
         
         .footer-brand p {
@@ -921,7 +886,7 @@
         /* Responsive */
         @media (max-width: 968px) {
             .logo {
-                height: 52px;
+                height: 70px;
             }
             
             .nav-links {
@@ -980,7 +945,7 @@
     <!-- Header -->
     <header>
         <nav>
-            <img src="logo.png" alt="DeonM Art Gallery" class="logo">
+            <img src="logo-main.png" alt="DeonM Art Gallery" class="logo">
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -1004,9 +969,13 @@
                 <h1>Where Creativity <span>Meets Community</span></h1>
                 <p>DeonM Art Gallery is a multi-functional creative hub in eMakhazeni, offering fine art, commercial branding, custom apparel, and art education. Where artistic excellence meets professional service.</p>
                 <div class="hero-buttons">
-                    <a href="#gallery" class="cta-button">View Gallery</a>
-                    <a href="https://wa.me/27716436128?text=Hi%20DeonM%20Art%20Gallery,%20I%20would%20like%20to%20enquire." target="_blank" class="whatsapp-btn">WhatsApp Us</a>
-                    <a href="#contact" class="btn-secondary">Enquire Now</a>
+                    <a href="#gallery" class="btn-secondary">View Gallery</a>
+                    
+                    <a href="https://wa.me/27716436128?text=Hi%20DeonM%20Art%20Gallery,%20I%20would%20like%20to%20enquire." 
+                       target="_blank" 
+                       class="cta-button whatsapp-btn">
+                       WhatsApp Us
+                    </a>
                 </div>
             </div>
             <div class="hero-image">
@@ -1284,17 +1253,12 @@
                     </div>
                 </div>
                 
-                <div class="social-links">
-                    <a href="https://instagram.com/deonm_art" target="_blank" title="Instagram">📷</a>
-                    <a href="#" target="_blank" title="TikTok">🎵</a>
-                </div>
-                
                 <a href="https://wa.me/27716436128?text=Hi%20DeonM%20Art%20Gallery,%20I%20would%20like%20to%20enquire." target="_blank" class="whatsapp-contact">
                     <span>💬</span>
                     <span>Chat on WhatsApp</span>
                 </a>
                 
-                <div class="contact-image" style="margin-top: 3rem;">
+                <div class="contact-image">
                     <img src="contacts.jpg" alt="Contact Us">
                 </div>
             </div>
@@ -1353,7 +1317,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="logo.png" alt="DeonM Art Gallery">
+                <img src="logo-main.png" alt="DeonM Art Gallery">
                 <p>Multi-functional creative hub in eMakhazeni, Mpumalanga. Bridging fine art excellence with professional commercial services and community development.</p>
                 <p class="tagline">"I really believe in my Art work"</p>
             </div>
@@ -1384,7 +1348,6 @@
                 <ul>
                     <li><a href="tel:0716436128">071 643 6128</a></li>
                     <li><a href="mailto:mahlangudeon21@gmail.com">Email Us</a></li>
-                    <li><a href="https://instagram.com/deonm_art" target="_blank">Instagram</a></li>
                     <li><a href="https://wa.me/27716436128?text=Hi%20DeonM%20Art%20Gallery,%20I%20would%20like%20to%20enquire." target="_blank">WhatsApp</a></li>
                 </ul>
             </div>
