@@ -24,6 +24,8 @@
             --accent-blue: #1d4ed8;
             --accent-red: #dc2626;
             --accent-yellow: #fbbf24;
+            --whatsapp: #25D366;
+            --whatsapp-dark: #128C7E;
         }
         
         html {
@@ -60,14 +62,14 @@
         nav {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 1.5rem 2rem;
+            padding: 1.2rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .logo {
-            height: 110px;
+            height: 72px;
             width: auto;
             object-fit: contain;
             display: block;
@@ -75,7 +77,7 @@
         
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
             align-items: center;
             list-style: none;
         }
@@ -127,6 +129,29 @@
             border-color: var(--accent-blue);
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(29, 78, 216, 0.25);
+        }
+        
+        .whatsapp-btn {
+            background: var(--whatsapp);
+            color: #ffffff !important;
+            padding: 0.9rem 2.2rem;
+            border: 1px solid var(--whatsapp);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .whatsapp-btn:hover {
+            background: var(--whatsapp-dark);
+            border-color: var(--whatsapp-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.25);
         }
         
         .mobile-menu {
@@ -199,6 +224,7 @@
         .hero-buttons {
             display: flex;
             gap: 1.5rem;
+            flex-wrap: wrap;
         }
         
         .btn-secondary {
@@ -506,75 +532,85 @@
             color: var(--accent-yellow);
         }
         
-        /* Services Section */
+        /* Services Section - Redesigned */
         .services {
             padding: 8rem 2rem;
-            background: var(--light-gray);
+            background: var(--white);
         }
         
         .services-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         
         .services-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
         }
         
         .services-header h2 {
             font-size: clamp(2rem, 4vw, 3rem);
             color: var(--black);
+            margin-bottom: 1rem;
         }
         
-        .services-grid {
+        .services-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .services-grid-new {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
         }
         
-        .services-image {
-            height: 700px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-        }
-        
-        .services-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(30%);
-        }
-        
-        .services-list {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-        
-        .service-item {
-            padding: 2rem;
-            border-left: 3px solid var(--accent-blue);
-            transition: all 0.3s ease;
+        .service-card-new {
             background: var(--white);
+            padding: 3rem 2.5rem;
+            border: 1px solid rgba(0,0,0,0.08);
+            box-shadow: 0 5px 30px rgba(0,0,0,0.03);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
         }
         
-        .service-item:hover {
-            border-left-color: var(--accent-red);
-            transform: translateX(10px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        .service-card-new::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-blue);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
         }
         
-        .service-item h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
+        .service-card-new:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+            border-color: rgba(0,0,0,0.12);
+        }
+        
+        .service-card-new:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-card-new h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
             color: var(--black);
+            font-weight: 400;
         }
         
-        .service-item p {
+        .service-card-new p {
             color: var(--gray);
             font-size: 0.95rem;
+            line-height: 1.9;
+            margin-bottom: 0;
         }
         
         /* Why Choose Us */
@@ -643,7 +679,7 @@
         /* Contact Section */
         .contact {
             padding: 8rem 2rem;
-            background: var(--white);
+            background: var(--light-gray);
         }
         
         .contact-container {
@@ -714,6 +750,27 @@
             transform: translateY(-3px);
         }
         
+        .whatsapp-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--whatsapp);
+            color: var(--white) !important;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .whatsapp-contact:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
         .contact-image {
             height: 500px;
             overflow: hidden;
@@ -727,9 +784,30 @@
         }
         
         .contact-form {
-            background: var(--light-gray);
+            background: var(--white);
             padding: 3rem;
             box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+        
+        .whatsapp-note {
+            background: rgba(37, 211, 102, 0.08);
+            border-left: 4px solid var(--whatsapp);
+            padding: 1.2rem;
+            margin-bottom: 2rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .whatsapp-note p {
+            color: var(--charcoal);
+            font-size: 0.95rem;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .whatsapp-note strong {
+            color: var(--whatsapp-dark);
         }
         
         .form-group {
@@ -843,7 +921,7 @@
         /* Responsive */
         @media (max-width: 968px) {
             .logo {
-                height: 70px;
+                height: 52px;
             }
             
             .nav-links {
@@ -864,12 +942,8 @@
                 order: -1;
             }
             
-            .services-grid {
+            .services-grid-new {
                 grid-template-columns: 1fr;
-            }
-            
-            .services-image {
-                height: 400px;
             }
             
             .contact-container {
@@ -906,14 +980,14 @@
     <!-- Header -->
     <header>
         <nav>
-            <img src="logo-main.png" alt="DeonM Art Gallery" class="logo">
+            <img src="logo.png" alt="DeonM Art Gallery" class="logo">
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact" class="cta-button">Enquire Now</a></li>
+                <li><a href="https://wa.me/27716436128?text=Hi%20DeonM%20Art%20Gallery,%20I%20would%20like%20to%20enquire." target="_blank" class="whatsapp-btn">WhatsApp Us</a></li>
             </ul>
             <div class="mobile-menu">
                 <span></span>
@@ -931,6 +1005,7 @@
                 <p>DeonM Art Gallery is a multi-functional creative hub in eMakhazeni, offering fine art, commercial branding, custom apparel, and art education. Where artistic excellence meets professional service.</p>
                 <div class="hero-buttons">
                     <a href="#gallery" class="cta-button">View Gallery</a>
+                    <a href="https://wa.me/27716436128?text=Hi%20DeonM%20Art%20Gallery,%20I%20would%20like%20to%20enquire." target="_blank" class="whatsapp-btn">WhatsApp Us</a>
                     <a href="#contact" class="btn-secondary">Enquire Now</a>
                 </div>
             </div>
@@ -1066,8 +1141,12 @@
                     <p>Fine Art Collection</p>
                 </div>
             </div>
-            <div class="gallery-item placeholder">
-                <span>Artwork 8<br>Coming Soon</span>
+            <div class="gallery-item" onclick="openLightbox('art8.jpg')">
+                <img src="art8.jpg" alt="Artwork 8">
+                <div class="gallery-overlay">
+                    <h3>Artwork 8</h3>
+                    <p>Fine Art Collection</p>
+                </div>
             </div>
             <div class="gallery-item" onclick="openLightbox('art9.jpg')">
                 <img src="art9.jpg" alt="Artwork 9">
@@ -1092,38 +1171,38 @@
         <img src="" alt="Full size artwork" id="lightbox-img">
     </div>
 
-    <!-- Services Section -->
+    <!-- Services Section - Redesigned -->
     <section class="services" id="services">
         <div class="services-container">
             <div class="services-header">
                 <span class="section-label">Our Services</span>
                 <h2>Creative Solutions for Every Need</h2>
+                <p>From fine art to commercial branding, we offer comprehensive creative services tailored to your vision.</p>
             </div>
-            <div class="services-grid">
-                <div class="services-image">
-                    <img src="services.jpg" alt="Our Services">
+            <div class="services-grid-new">
+                <div class="service-card-new">
+                    <h3>Fine Art Gallery</h3>
+                    <p>Hyperrealistic pencil drawings, sketches, oil and acrylic paintings, and custom commissions created with meticulous attention to detail and artistic excellence.</p>
                 </div>
-                <div class="services-list">
-                    <div class="service-item">
-                        <h3>Fine Art Creation</h3>
-                        <p>Original hyperrealistic drawings, sketches, and paintings created with meticulous attention to detail and artistic excellence.</p>
-                    </div>
-                    <div class="service-item">
-                        <h3>Commercial Branding & Design</h3>
-                        <p>Professional logo design, signboards, and digital printing services to elevate your brand presence.</p>
-                    </div>
-                    <div class="service-item">
-                        <h3>Custom Apparel Printing</h3>
-                        <p>In-house screen printing and embroidery services for custom clothing, uniforms, and promotional items.</p>
-                    </div>
-                    <div class="service-item">
-                        <h3>Art Education Programs</h3>
-                        <p>Young Artist Classes and workshops designed to develop creativity and artistic skills in our community's youth.</p>
-                    </div>
-                    <div class="service-item">
-                        <h3>Custom Framing & Consultation</h3>
-                        <p>Professional framing services and expert artistic consultation to bring your creative vision to life.</p>
-                    </div>
+                <div class="service-card-new">
+                    <h3>Commercial Branding</h3>
+                    <p>Logo design, signboards, banners, digital printing, and visual identity work that helps your business stand out with professional, memorable branding.</p>
+                </div>
+                <div class="service-card-new">
+                    <h3>Custom Apparel</h3>
+                    <p>In-house printing and embroidery for branded clothing, uniforms, and custom apparel. Quality control from design to final product.</p>
+                </div>
+                <div class="service-card-new">
+                    <h3>Art Education</h3>
+                    <p>Young Artist Classes and creative development programs for youth in the eMakhazeni community, nurturing the next generation of artistic talent.</p>
+                </div>
+                <div class="service-card-new">
+                    <h3>Custom Framing & Consultation</h3>
+                    <p>Professional framing services and one-on-one creative consultation to bring your artistic vision to life with expert guidance.</p>
+                </div>
+                <div class="service-card-new">
+                    <h3>Graphic Design & Print</h3>
+                    <p>Design support for promotional and commercial needs, from marketing materials to large-format printing with professional finish.</p>
                 </div>
             </div>
         </div>
@@ -1210,6 +1289,11 @@
                     <a href="#" target="_blank" title="TikTok">🎵</a>
                 </div>
                 
+                <a href="https://wa.me/27716436128?text=Hi%20DeonM%20Art%20Gallery,%20I%20would%20like%20to%20enquire." target="_blank" class="whatsapp-contact">
+                    <span>💬</span>
+                    <span>Chat on WhatsApp</span>
+                </a>
+                
                 <div class="contact-image" style="margin-top: 3rem;">
                     <img src="contacts.jpg" alt="Contact Us">
                 </div>
@@ -1218,6 +1302,10 @@
             <div class="contact-form">
                 <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--black);">Request a Consultation</h3>
                 <p style="color: var(--gray); margin-bottom: 2rem; font-size: 0.95rem;">Tell us about your project - art commission, branding, apparel, or classes</p>
+                
+                <div class="whatsapp-note">
+                    <p><strong>💬 For faster responses,</strong> message us directly on WhatsApp.</p>
+                </div>
                 
                 <form onsubmit="event.preventDefault(); alert('Thank you for your enquiry. We will contact you soon.');">
                     <div class="form-group">
@@ -1245,6 +1333,7 @@
                             <option value="embroidery">Embroidery Services</option>
                             <option value="classes">Young Artist Classes</option>
                             <option value="framing">Custom Framing</option>
+                            <option value="graphic-design">Graphic Design & Print</option>
                             <option value="other">Other Enquiry</option>
                         </select>
                     </div>
@@ -1264,7 +1353,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="logo-main.png" alt="DeonM Art Gallery">
+                <img src="logo.png" alt="DeonM Art Gallery">
                 <p>Multi-functional creative hub in eMakhazeni, Mpumalanga. Bridging fine art excellence with professional commercial services and community development.</p>
                 <p class="tagline">"I really believe in my Art work"</p>
             </div>
@@ -1296,7 +1385,7 @@
                     <li><a href="tel:0716436128">071 643 6128</a></li>
                     <li><a href="mailto:mahlangudeon21@gmail.com">Email Us</a></li>
                     <li><a href="https://instagram.com/deonm_art" target="_blank">Instagram</a></li>
-                    <li><a href="#">TikTok</a></li>
+                    <li><a href="https://wa.me/27716436128?text=Hi%20DeonM%20Art%20Gallery,%20I%20would%20like%20to%20enquire." target="_blank">WhatsApp</a></li>
                 </ul>
             </div>
         </div>
